@@ -1,0 +1,6 @@
+# vars file for netbeans-ide
+---
+netbeans_ide_downloads_path: /var/lib/ansible/netbeans-ide/downloads
+netbeans_ide_java_dependencies:
+  - openjdk-7-jre
+  - openjdk-7-jdk

@@ -1,0 +1,7 @@
+# test file for netbeans-ide
+---
+- hosts: localhost
+  connection: local
+  sudo: true
+  roles:
+    - ../../

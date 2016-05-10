@@ -1,0 +1,7 @@
+# test file for netbeans-ide
+---
+- hosts: all
+  remote_user: vagrant
+  sudo: true
+  roles:
+    - ../../

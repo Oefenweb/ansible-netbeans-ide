@@ -1,0 +1,63 @@
+# tasks file for netbeans-ide
+---
+- name: install dependencies (java)
+  apt:
+    name: "{{ item }}"
+    state: latest
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+  with_items: "{{ netbeans_ide_java_dependencies }}"
+  when: netbeans_ide_assume_java_provided == false
+  tags:
+    - configuration
+    - netbeans-ide
+    - netbeans-ide-dependencies
+    - netbeans-ide-dependencies-java
+
+- name: create (download) directory
+  file:
+    path: "{{ netbeans_ide_downloads_path }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0755
+  tags:
+    - configuration
+    - netbeans-ide
+    - netbeans-ide-download
+
+- name: download
+  get_url:
+    url: "http://download.netbeans.org/netbeans/{{ netbeans_ide_version }}/final/bundles/netbeans-{{ netbeans_ide_version }}-linux.sh"
+    dest: "{{ netbeans_ide_downloads_path }}/netbeans-{{ netbeans_ide_version }}-linux.sh"
+    owner: root
+    group: root
+    mode: 0755
+  register: download
+  tags:
+    - configuration
+    - netbeans-ide
+    - netbeans-ide-download
+
+- name: create state file
+  copy:
+    src: "{{ netbeans_ide_state_file | default('state.xml') }}"
+    dest: "{{ netbeans_ide_downloads_path }}/state.xml"
+    owner: root
+    group: root
+    mode: 0644
+  register: create_state_file
+  tags:
+    - configuration
+    - netbeans-ide
+    - netbeans-ide-state
+
+- name: install
+  command: ./netbeans-{{ netbeans_ide_version }}-linux.sh --silent --state ./state.xml
+  args:
+    chdir: "{{ netbeans_ide_downloads_path }}"
+  when: download | changed or create_state_file | changed
+  tags:
+    - configuration
+    - netbeans-ide
+    - netbeans-ide-install

@@ -1,6 +1,7 @@
 # vars file for netbeans-ide
 ---
 netbeans_ide_downloads_path: /var/lib/ansible/netbeans-ide/downloads
+netbeans_ide_default_java_too_old: "{{ (ansible_distribution == 'Ubuntu' and ansible_distribution_version | version_compare('12.04', '<=') or ansible_distribution == 'Debian' and ansible_distribution_version | version_compare('7.0', '<=')) }}"
 netbeans_ide_java_dependencies:
-  - default-jre
-  - default-jdk
+  - "{{ 'openjdk-7-jre' if netbeans_ide_default_java_too_old else 'default-jre' }}"
+  - "{{ 'openjdk-7-jdk' if netbeans_ide_default_java_too_old else 'default-jdk' }}"

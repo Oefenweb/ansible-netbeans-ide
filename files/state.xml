@@ -37,64 +37,64 @@
   holder.
 --><state xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="state-file.xsd">
 <components>
-        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-base" version="8.1.0.0.201510222201">
+        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-base" version="8.2.0.0.201609300101">
             <properties>
-                <property name="installation.location.windows">$N{install}/NetBeans 8.1</property>
-                <property name="minimum.jdk.version">1.7.0</property>
+                <property name="installation.location.windows">$N{install}/NetBeans 8.2</property>
+                <property name="minimum.jdk.version">1.8.0</property>
                 <property name="jdk.location">/usr</property>
-                <property name="installation.timestamp">1462784021158</property>
+                <property name="installation.timestamp">1477765998612</property>
                 <property name="start.menu.shortcut.location">all.users</property>
-                <property name="installation.location.macosx">$N{install}/NetBeans/NetBeans 8.1.app</property>
-                <property name="installation.location">/usr/local/netbeans-8.1</property>
+                <property name="installation.location.macosx">$N{install}/NetBeans/NetBeans 8.2.app</property>
+                <property name="installation.location">/usr/local/netbeans-8.2</property>
                 <property name="desktop.shortcut.location">all.users</property>
-                <property name="netbeans.summary.message.text"></property>
+                <property name="netbeans.summary.message.text"/>
             </properties>
         </product>
-        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-extide" version="8.1.0.0.201510222201">
+        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-extide" version="8.2.0.0.201609300101">
             <properties>
                 <property name="show-in-wizard">false</property>
-                <property name="installation.location">/usr/local/netbeans-8.1</property>
+                <property name="installation.location">/usr/local/netbeans-8.2</property>
             </properties>
         </product>
-        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-javase" version="8.1.0.0.201510222201">
+        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-javase" version="8.2.0.0.201609300101">
             <properties>
                 <property name="jre.allowed">false</property>
-                <property name="installation.location">/usr/local/netbeans-8.1</property>
+                <property name="installation.location">/usr/local/netbeans-8.2</property>
             </properties>
         </product>
-        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-javaee" version="8.1.0.0.201510222201">
+        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-javaee" version="8.2.0.0.201609300101">
             <properties>
-                <property name="installation.location">/usr/local/netbeans-8.1</property>
+                <property name="installation.location">/usr/local/netbeans-8.2</property>
             </properties>
         </product>
-        <product platform="linux" status="to-be-installed" uid="nb-javame" version="8.1.0.0.201510222201">
+        <product platform="linux" status="to-be-installed" uid="nb-javame" version="8.2.0.0.201609300101">
             <properties>
-                <property name="installation.location">/usr/local/netbeans-8.1</property>
+                <property name="installation.location">/usr/local/netbeans-8.2</property>
             </properties>
         </product>
-        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-webcommon" version="8.1.0.0.201510222201">
+        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-webcommon" version="8.2.0.0.201609300101">
             <properties>
-                <property name="installation.location">/usr/local/netbeans-8.1</property>
+                <property name="installation.location">/usr/local/netbeans-8.2</property>
             </properties>
         </product>
-        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-php" version="8.1.0.0.201510222201">
+        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-php" version="8.2.0.0.201609300101">
             <properties>
-                <property name="installation.location">/usr/local/netbeans-8.1</property>
+                <property name="installation.location">/usr/local/netbeans-8.2</property>
             </properties>
         </product>
-        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-cnd" version="8.1.0.0.201510222201">
+        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-cnd" version="8.2.0.0.201609300101">
             <properties>
-                <property name="installation.location">/usr/local/netbeans-8.1</property>
+                <property name="installation.location">/usr/local/netbeans-8.2</property>
             </properties>
         </product>
-        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-groovy" version="8.1.0.0.201510222201">
+        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-groovy" version="8.2.0.0.201609300101">
             <properties>
-                <property name="installation.location">/usr/local/netbeans-8.1</property>
+                <property name="installation.location">/usr/local/netbeans-8.2</property>
             </properties>
         </product>
-        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-ergonomics" version="8.1.0.0.201510222201">
+        <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="nb-ergonomics" version="8.2.0.0.201609300101">
             <properties>
-                <property name="installation.location">/usr/local/netbeans-8.1</property>
+                <property name="installation.location">/usr/local/netbeans-8.2</property>
             </properties>
         </product>
         <product platform="windows linux solaris-sparc solaris-x86 macosx-ppc macosx-x86" status="to-be-installed" uid="glassfish-mod" version="4.1.1.0.1">

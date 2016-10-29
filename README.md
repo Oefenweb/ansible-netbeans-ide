@@ -1,6 +1,6 @@
 ## netbeans-ide
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-netbeans-ide.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-netbeans-ide) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-netbeans--ide-blue.svg)](https://galaxy.ansible.com/Oefenweb/ansible-netbeans-ide)
+[![Build Status](https://travis-ci.org/Oefenweb/ansible-netbeans-ide.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-netbeans-ide) [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-netbeans--ide-blue.svg)](https://galaxy.ansible.com/Oefenweb/netbeans-ide)
 
 Set up [NetBeans IDE](https://netbeans.org/features/index.html) in Debian-like systems.
 

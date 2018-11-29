@@ -2,11 +2,10 @@
 ---
 - name: install dependencies (java)
   apt:
-    name: "{{ item }}"
+    name: "{{ netbeans_ide_java_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  with_items: "{{ netbeans_ide_java_dependencies }}"
   when: netbeans_ide_assume_java_provided == false
   tags:
     - configuration
@@ -33,7 +32,7 @@
     owner: root
     group: root
     mode: 0755
-  register: download
+  register: _download
   tags:
     - configuration
     - netbeans-ide
@@ -46,17 +45,18 @@
     owner: root
     group: root
     mode: 0644
-  register: create_state_file
+  register: _create_state_file
   tags:
     - configuration
     - netbeans-ide
     - netbeans-ide-state
 
 - name: install
-  command: ./netbeans-{{ netbeans_ide_version }}-linux.sh --silent --state ./state.xml
+  command: >
+    ./netbeans-{{ netbeans_ide_version }}-linux.sh --silent --state ./state.xml
   args:
     chdir: "{{ netbeans_ide_downloads_path }}"
-  when: download | changed or create_state_file | changed
+  when: _download is changed or _create_state_file is changed
   tags:
     - configuration
     - netbeans-ide

@@ -6,7 +6,7 @@
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  when: netbeans_ide_assume_java_provided == false
+  when: not netbeans_ide_assume_java_provided
   tags:
     - configuration
     - netbeans-ide

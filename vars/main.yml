@@ -1,4 +1,4 @@
-# vars file for netbeans-ide
+# vars file
 ---
 netbeans_ide_downloads_path: /var/lib/ansible/netbeans-ide/downloads
 netbeans_ide_default_java_too_old: "{{ (ansible_distribution == 'Ubuntu' and ansible_distribution_version is version('12.04', '<=') or ansible_distribution == 'Debian' and ansible_distribution_version is version('7', '<=')) }}"

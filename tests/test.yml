@@ -1,4 +1,4 @@
-# test file for netbeans-ide
+# test file
 ---
 - hosts: localhost
   connection: local

@@ -1,4 +1,4 @@
-# tasks file for netbeans-ide
+# tasks file
 ---
 - name: install dependencies (java)
   apt:

@@ -1,6 +1,7 @@
-# meta file for netbeans-ide
+# meta file
 ---
 galaxy_info:
+  namespace: oefenweb
   role_name: netbeans-ide
   author: Mischa ter Smitten
   company: Oefenweb.nl B.V.

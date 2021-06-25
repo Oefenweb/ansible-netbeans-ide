@@ -53,7 +53,7 @@
 
 - name: install
   command: >
-    ./Apache-NetBeans-{{ netbeans_ide_version }}-bin-linux-x64.sh" --silent --state ./state.xml
+    ./Apache-NetBeans-{{ netbeans_ide_version }}-bin-linux-x64.sh --silent --state ./state.xml
   args:
     chdir: "{{ netbeans_ide_downloads_path }}"
   when: _download is changed or _create_state_file is changed

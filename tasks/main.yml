@@ -6,7 +6,7 @@
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  when: not netbeans_ide_assume_java_provided
+  when: false
   tags:
     - configuration
     - netbeans-ide
@@ -27,8 +27,8 @@
 
 - name: download
   get_url:
-    url: "https://www.apache.org/dyn/closer.cgi/netbeans/netbeans/{{ netbeans_ide_version }}/Apache-NetBeans-{{ netbeans_ide_version }}-bin-linux-x64.sh"
-    dest: "{{ netbeans_ide_downloads_path }}/Apache-NetBeans-{{ netbeans_ide_version }}-bin-linux-x64.sh"
+    url: "http://download.oracle.com/otn-pub/java/jdk-nb/8u111-{{ netbeans_ide_version }}/jdk-8u111-nb-{{ netbeans_ide_version | replace('.', '_') }}-linux-x64.sh"
+    dest: "{{ netbeans_ide_downloads_path }}/netbeans-{{ netbeans_ide_version }}-linux.sh"
     owner: root
     group: root
     mode: 0755
@@ -53,7 +53,7 @@
 
 - name: install
   command: >
-    ./Apache-NetBeans-{{ netbeans_ide_version }}-bin-linux-x64.sh --silent --state ./state.xml
+    ./netbeans-{{ netbeans_ide_version }}-linux.sh --silent --state ./state.xml
   args:
     chdir: "{{ netbeans_ide_downloads_path }}"
   when: _download is changed or _create_state_file is changed

@@ -27,8 +27,8 @@
 
 - name: download
   get_url:
-    url: "http://download.netbeans.org/netbeans/{{ netbeans_ide_version }}/final/bundles/netbeans-{{ netbeans_ide_version }}-linux.sh"
-    dest: "{{ netbeans_ide_downloads_path }}/netbeans-{{ netbeans_ide_version }}-linux.sh"
+    url: "https://www.apache.org/dyn/closer.cgi/netbeans/netbeans/{{ netbeans_ide_version }}/Apache-NetBeans-{{ netbeans_ide_version }}-bin-linux-x64.sh"
+    dest: "{{ netbeans_ide_downloads_path }}/Apache-NetBeans-{{ netbeans_ide_version }}-bin-linux-x64.sh"
     owner: root
     group: root
     mode: 0755
@@ -53,7 +53,7 @@
 
 - name: install
   command: >
-    ./netbeans-{{ netbeans_ide_version }}-linux.sh --silent --state ./state.xml
+    ./Apache-NetBeans-{{ netbeans_ide_version }}-bin-linux-x64.sh" --silent --state ./state.xml
   args:
     chdir: "{{ netbeans_ide_downloads_path }}"
   when: _download is changed or _create_state_file is changed

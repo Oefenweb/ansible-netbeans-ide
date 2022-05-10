@@ -13,7 +13,7 @@ None
 
 * `netbeans_ide_assume_java_provided` [default: `false`]: Whether or not to assume that java (`jre` and `jdk`) is already installed
 
-* `netbeans_ide_version` [default: `8.2`]: Version to install
+* `netbeans_ide_version` [default: `13`]: Version to install
 * `netbeans_ide_state_file` [optional, default `files/state.xml`]: State file to use for installation
 
 ## Dependencies

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+    KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<state xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="state-file.xsd">
+    <components>
+        <product platform="windows linux" status="to-be-installed" uid="nb-all" version="13.0.0.220221.0">
+            <properties>
+                <property name="jdk.location">/usr</property>
+                <property name="minimum.jdk.version">1.8.0</property>
+                <property name="installation.location.macosx">$N{install}/NetBeans/NetBeans 11.app</property>
+                <property name="installation.location.windows">$N{install}/NetBeans-13</property>
+                <property name="start.menu.shortcut.location">all.users</property>
+                <property name="installation.location">/usr/local/netbeans-13</property>
+                <property name="installation.timestamp">1652190766818</property>
+                <property name="netbeans.summary.message.text">All plugins are up to date.</property>
+                <property name="desktop.shortcut.location">all.users</property>
+            </properties>
+        </product>
+        <product platform="windows linux" status="to-be-installed" uid="nb-extide" version="13.0.0.220221.0">
+            <properties>
+                <property name="installation.location">/usr/local/netbeans-13</property>
+                <property name="show-in-wizard">false</property>
+            </properties>
+        </product>
+        <product platform="windows linux" status="to-be-installed" uid="nb-javase" version="13.0.0.220221.0">
+            <properties>
+                <property name="installation.location">/usr/local/netbeans-13</property>
+                <property name="jre.allowed">false</property>
+            </properties>
+        </product>
+        <product platform="windows linux" status="to-be-installed" uid="nb-javaee" version="13.0.0.220221.0">
+            <properties>
+                <property name="installation.location">/usr/local/netbeans-13</property>
+            </properties>
+        </product>
+        <product platform="windows linux" status="to-be-installed" uid="nb-webcommon" version="13.0.0.220221.0">
+            <properties>
+                <property name="installation.location">/usr/local/netbeans-13</property>
+            </properties>
+        </product>
+        <product platform="windows linux" status="to-be-installed" uid="nb-php" version="13.0.0.220221.0">
+            <properties>
+                <property name="installation.location">/usr/local/netbeans-13</property>
+            </properties>
+        </product>
+    </components>
+</state>

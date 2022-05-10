@@ -27,7 +27,7 @@
 
 - name: download
   get_url:
-    url: "http://download.netbeans.org/netbeans/{{ netbeans_ide_version }}/final/bundles/netbeans-{{ netbeans_ide_version }}-linux.sh"
+    url: "https://archive.apache.org/dist/netbeans/netbeans-installers/{{ netbeans_ide_version }}/Apache-NetBeans-{{ netbeans_ide_version }}-bin-linux-x64.sh"
     dest: "{{ netbeans_ide_downloads_path }}/netbeans-{{ netbeans_ide_version }}-linux.sh"
     owner: root
     group: root
@@ -40,7 +40,7 @@
 
 - name: create state file
   copy:
-    src: "{{ netbeans_ide_state_file | default('state.xml') }}"
+    src: "{{ netbeans_ide_state_file | default('state-' ~ netbeans_ide_version ~ '.xml') }}"
     dest: "{{ netbeans_ide_downloads_path }}/state.xml"
     owner: root
     group: root

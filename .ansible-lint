@@ -1,6 +1,7 @@
 ---
 warn_list:
   - role-name
+  - name[play]
   - name[casing]
-  - '204'
+  - no-changed-when
   - no-handler

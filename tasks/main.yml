@@ -1,7 +1,7 @@
 # tasks file
 ---
 - name: install dependencies (java)
-  apt:
+  ansible.builtin.apt:
     name: "{{ netbeans_ide_java_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
@@ -14,7 +14,7 @@
     - netbeans-ide-dependencies-java
 
 - name: create (download) directory
-  file:
+  ansible.builtin.file:
     path: "{{ netbeans_ide_downloads_path }}"
     state: directory
     owner: root
@@ -26,7 +26,7 @@
     - netbeans-ide-download
 
 - name: download
-  get_url:
+  ansible.builtin.get_url:
     url: "https://archive.apache.org/dist/netbeans/netbeans-installers/{{ netbeans_ide_version }}/Apache-NetBeans-{{ netbeans_ide_version }}-bin-linux-x64.sh"
     dest: "{{ netbeans_ide_downloads_path }}/netbeans-{{ netbeans_ide_version }}-linux.sh"
     owner: root
@@ -39,7 +39,7 @@
     - netbeans-ide-download
 
 - name: create state file
-  copy:
+  ansible.builtin.copy:
     src: "{{ netbeans_ide_state_file | default('state-' ~ netbeans_ide_version ~ '.xml') }}"
     dest: "{{ netbeans_ide_downloads_path }}/state.xml"
     owner: root
@@ -52,7 +52,7 @@
     - netbeans-ide-state
 
 - name: install
-  command: >
+  ansible.builtin.command: >
     ./netbeans-{{ netbeans_ide_version }}-linux.sh --silent --state ./state.xml
   args:
     chdir: "{{ netbeans_ide_downloads_path }}"

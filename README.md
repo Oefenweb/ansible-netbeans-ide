@@ -30,7 +30,7 @@ None
 ---
 - hosts: all
   roles:
-    - netbeans-ide
+    - oefenweb.netbeans-ide
 ```
 
 #### License

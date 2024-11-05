@@ -57,6 +57,7 @@
   args:
     chdir: "{{ netbeans_ide_downloads_path }}"
   when: _download is changed or _create_state_file is changed
+  changed_when: true
   tags:
     - configuration
     - netbeans-ide

@@ -7,9 +7,14 @@
     state: directory
     recurse: true
   when:
-    - not netbeans_ide_assume_java_provided
     - ansible_distribution == 'Ubuntu'
     - ansible_distribution_major_version is version('18', '>=')
+    - not netbeans_ide_assume_java_provided
+  tags:
+    - configuration
+    - netbeans-ide
+    - netbeans-ide-dependencies
+    - netbeans-ide-dependencies-java
 
 - name: install dependencies (java)
   ansible.builtin.apt:

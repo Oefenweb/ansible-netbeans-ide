@@ -1,5 +1,21 @@
 # tasks file
 ---
+# See: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=863199
+- name: ensure man directory
+  ansible.builtin.file:
+    path: /usr/share/man/man1
+    state: directory
+    recurse: true
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_distribution_major_version is version('18', '>=')
+    - not netbeans_ide_assume_java_provided
+  tags:
+    - configuration
+    - netbeans-ide
+    - netbeans-ide-dependencies
+    - netbeans-ide-dependencies-java
+
 - name: install dependencies (java)
   ansible.builtin.apt:
     name: "{{ netbeans_ide_java_dependencies }}"
@@ -57,6 +73,7 @@
   args:
     chdir: "{{ netbeans_ide_downloads_path }}"
   when: _download is changed or _create_state_file is changed
+  changed_when: true
   tags:
     - configuration
     - netbeans-ide

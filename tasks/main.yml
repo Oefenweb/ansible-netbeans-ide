@@ -35,7 +35,7 @@
     state: directory
     owner: root
     group: root
-    mode: 0755
+    mode: '0755'
   tags:
     - configuration
     - netbeans-ide
@@ -47,7 +47,7 @@
     dest: "{{ netbeans_ide_downloads_path }}/netbeans-{{ netbeans_ide_version }}-linux.sh"
     owner: root
     group: root
-    mode: 0755
+    mode: '0755'
   register: _download
   tags:
     - configuration
@@ -60,7 +60,7 @@
     dest: "{{ netbeans_ide_downloads_path }}/state.xml"
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
   register: _create_state_file
   tags:
     - configuration
